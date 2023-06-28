@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+body{
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    width: 414px;
+}
+
+html{
+    background-color: rgba(122, 191, 191, 0.5);
+}
+
+#sideDishes{
+    background-color: #7ABFBF;
+    display: flex;
+}
+
+#details{
+    color: #0D0D0D;
+}
+
+nav{
+    background-color: #ffffff;
+}
+
+[src="images/street-tacos.png"]{
+    width: 414px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Bebas Neue';
+}
+
+#recipeName{
+    text-align: center;
+}
+
+#options{
+    color: #eb5428;
+    font-family: 'Bebas Neue',sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+}
+
+#mainContent{
+    display: grid;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+    font-family: 'Montserrat' ,sans-serif;
+    font-weight: bold;
+}
+
+nav li{
+    font-family: 'Bebas Neue' ,sans-serif;
+    color: #eb5428;
+    display: grid;
+}
+
+nav li img{
+    width: 100px;
+}
+
+.search{
+    height: 20px;
+    border: 2px solid #eb5428;
+    background-color: #eb5428;
+}
+
+.icon-tabler-search{
+    fill: #;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px){
+    body{
+        width:768px;
+    }
+    [src="images/street-tacos.png"]{
+        width: 768px;
+    }
+    #recipeName{
+        text-align: left;
+    }
+    #details{
+        color: #0D0D0D;
+        text-align: center;
+    }
+    #options{
+        color: #eb5428;
+        font-family: 'Bebas Neue',sans-serif;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+    }
+}
+
+@media screen and (min-width:1280px){
+    body{
+        width:1280px;
+    }
+    #recipeName{
+        text-align: center;
+    }
+    #details{
+        background-color: #0D0D0D;
+        color: #7ABFBF;
+        text-align: left;
+    }
+    #options{
+        border: 3px solid #eb5428;
+        color: #eb5428;
+        font-family: 'Bebas Neue',sans-serif;
+        display:block
+    }
+}
