@@ -4,6 +4,7 @@ body{
     margin: 0 auto;
     background-color: #f2f2f2;
     width: 414px;
+    display: grid;
 }
 
 html{
@@ -12,15 +13,23 @@ html{
 
 #sideDishes{
     background-color: #7ABFBF;
-    display: flex;
+    display: grid;
 }
 
 #details{
     color: #0D0D0D;
+    width: 414px;
+}
+
+#ingredients, #directions, #sideDishes{
+    width:414px;
 }
 
 nav{
     background-color: #ffffff;
+    border: 2px solid gray;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 [src="images/street-tacos.png"]{
@@ -34,6 +43,8 @@ h2{
 
 #recipeName{
     text-align: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 #options{
@@ -41,10 +52,27 @@ h2{
     font-family: 'Bebas Neue',sans-serif;
     background-color: #f2f2f2;
     display: flex;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 414px;
+    height:75px;
+}
+
+#mainImage{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 414px;
 }
 
 #mainContent{
     display: grid;
+    width: 414px;
+}
+
+#mainText{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width:414px;
 }
 
 p{
@@ -62,21 +90,36 @@ nav li{
     display: grid;
 }
 
+nav ul{
+    display: none;
+}
+
 nav li img{
-    width: 100px;
+    width: 75px;
+}
+
+#homeIcon{
+    background-color: #eb5428;
 }
 
 .search{
     height: 20px;
     border: 2px solid #eb5428;
-    background-color: #eb5428;
+    /* background-color: #eb5428; */
 }
 
-.icon-tabler-search{
-    fill: #;
+footer{
+    font-family: 'Bebas Neue' ,sans-serif;
 }
 
+footer img{
+    width: 200px;
+}
 
+footer ul{
+    color: #eb5428;
+    display: flex;
+}
 
 
 
@@ -85,41 +128,219 @@ nav li img{
 @media screen and (min-width:768px){
     body{
         width:768px;
+        margin: 0 auto;
     }
     [src="images/street-tacos.png"]{
         width: 768px;
     }
     #recipeName{
         text-align: left;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding-left: 8px;
     }
     #details{
         color: #0D0D0D;
         text-align: center;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
+
+    #mainContent{
+        display: grid;
+        width: 768px;
+        grid-template-columns: auto auto auto auto;
+    }
+
     #options{
         color: #eb5428;
-        font-family: 'Bebas Neue',sans-serif;
+        /* font-family: 'Bebas Neue',sans-serif; */
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width: 768px;
+        margin-bottom:-75px;
+        z-index:1;
+    }
+
+    #mainImage{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width: 768px;
+    }
+    
+    #mainText{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width: 768px;
+    }
+
+    #hamburger{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        width: 768px;
+    }
+
+    nav{
+        display: flex;
+        width: 768px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #details, #sideDishes{
+        width: 780px;
+    }
+
+    #ingredients{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    #directions{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+
+    #sideDishes{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 8;
     }
 }
 
 @media screen and (min-width:1280px){
     body{
         width:1280px;
+        margin: 0 auto;
+    }
+    #hamburger{
+        display: none;
     }
     #recipeName{
         text-align: center;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
     }
     #details{
         background-color: #0D0D0D;
         color: #7ABFBF;
         text-align: left;
+        grid-column-start: 1;
+        grid-column-end: 4;
     }
     #options{
         border: 3px solid #eb5428;
         color: #eb5428;
-        font-family: 'Bebas Neue',sans-serif;
-        display:block
+        /* font-family: 'Bebas Neue',sans-serif; */
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: #ffffff;
+        width: 100px;
+    }
+
+    #mainImage{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    #mainContent{
+        /* display: grid; */
+        width: 1280px;
+        grid-template-columns: auto auto;
+    }
+    
+    #mainText{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 100%;
+    }
+
+    #details{
+        width: 1280px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+
+    nav ul{
+        display: flex;
+        width:1280px;
+    }
+
+    nav{
+        display: flex;
+        width:1280px;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    #ingredients{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        /* display:inline; */
+        width: 300px;
+    }
+
+    #directions{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        /* display:inline; */
+        width: 400px;
+    }
+
+    #sideDishes{
+        width: 1280px;
+        display: grid;
+    }
+
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 8;
     }
 }
